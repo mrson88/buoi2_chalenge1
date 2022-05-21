@@ -15,71 +15,167 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.pink,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Stack(
             children: [
               Container(
-                child: Column(
+                child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      height: 100,
-                      color: Colors.blue,
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 25,
-                            width: 25,
-                            color: Colors.blueGrey,
-                          ),
-                          Container(
-                            height: 25,
-                            width: 25,
-                            color: Colors.yellowAccent,
-                          ),
-                          Container(
-                            height: 25,
-                            width: 25,
-                            color: Colors.blue,
-                          ),
-                          Container(
-                            height: 25,
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: 25,
-                                  width: 25,
-                                )
-                              ],
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      flex: 1,
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                            flex: 1,
+                                            child: Container(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                          Expanded(
+                                            flex: 2,
+                                            child: Container(
+                                              color: Colors.lightBlue,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                            flex: 1,
+                                            child: Container(
+                                              color: Colors.orange,
+                                            ),
+                                          ),
+                                          Expanded(
+                                            flex: 2,
+                                            child: Container(
+                                              color: Colors.lightBlue,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                            flex: 1,
+                                            child: Container(
+                                              color: Colors.blue,
+                                            ),
+                                          ),
+                                          Expanded(
+                                            flex: 2,
+                                            child: Container(
+                                              color: Colors.lightBlue,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: Container(
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                              flex: 1,
+                                              child: Container(
+                                                width: 25,
+                                                color: Colors.pink,
+                                              ),
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: Container(
+                                                width: 25,
+                                                color: Colors.lightBlueAccent,
+                                              ),
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: Container(
+                                                width: 25,
+                                                color: Colors.yellow,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                color: Colors.lightBlue,
+                              ),
                             ),
-                          )
-                        ],
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                color: Colors.black,
+                              ),
+                            ),
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                color: Colors.yellow,
+                              ),
+                            ),
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        color: Colors.white,
                       ),
                     ),
-                    Container(
-                      height: 150,
-                      color: Colors.black,
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        color: Colors.pink,
+                      ),
                     ),
-                    Container(
-                      height: 150,
-                      color: Colors.yellow,
+                    SizedBox(
+                      child: Container(
+                        width: 10,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        color: Colors.pink,
+                      ),
                     ),
                   ],
                 ),
-                height: double.infinity,
-                width: 80,
-                color: Colors.white,
               ),
-              Container(
-                height: double.infinity,
-                width: 200,
-                color: Colors.pink,
-              ),
-              SizedBox(
+              Positioned(
+                left: 50,
+                top: 550,
                 child: Container(
-                  color: Colors.white,
+                  width: 150,
+                  height: 150,
+                  color: Colors.black45,
                 ),
-                width: 10,
               ),
             ],
           ),
