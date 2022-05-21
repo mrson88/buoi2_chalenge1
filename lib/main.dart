@@ -169,10 +169,10 @@ class MyApp extends StatelessWidget {
               ),
               Positioned(
                 left: rong / 8,
-                top: dai / 2,
+                top: dai / 2.1,
                 child: Container(
-                  width: rong / 2.5,
-                  height: dai / 5,
+                  width: rong / 3,
+                  height: dai / 6,
                   color: Colors.black45,
                 ),
               ),
@@ -180,7 +180,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.play_arrow),
+          child: Icon(Icons.home),
           onPressed: null,
         ),
       ),
