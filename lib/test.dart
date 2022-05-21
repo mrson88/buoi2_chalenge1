@@ -1,38 +1,24 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MaterialApp(home: LoginPage()));
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.pink,
-        body: SafeArea(
-          child: Row(
-            children: [
-              Expanded(
-                child: Column(),
-              ),
-              Expanded(
-                child: Container(
-                  height: double.infinity,
-                  width: 200,
-                  color: Colors.pink,
-                ),
+        body: Container(
+          constraints: BoxConstraints.expand(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                color: Colors.red,
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height / 3,
               )
             ],
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.play_arrow),
-          onPressed: null,
         ),
       ),
     );

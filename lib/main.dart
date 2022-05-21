@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MaterialApp(home: MyApp()));
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    double rong = MediaQuery.of(context).size.width;
+    double dai = MediaQuery.of(context).size.height;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.pink,
-        body: SafeArea(
+        body: Center(
           child: Stack(
             children: [
               Container(
@@ -169,11 +168,11 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 50,
-                top: 550,
+                left: rong / 8,
+                top: dai / 2,
                 child: Container(
-                  width: 150,
-                  height: 150,
+                  width: rong / 2.5,
+                  height: dai / 5,
                   color: Colors.black45,
                 ),
               ),
