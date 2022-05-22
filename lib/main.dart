@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     double dai = MediaQuery.of(context).size.height;
 
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.pink,
         body: Center(
@@ -96,21 +96,18 @@ class MyApp extends StatelessWidget {
                                             Expanded(
                                               flex: 1,
                                               child: Container(
-                                                width: 25,
                                                 color: Colors.pink,
                                               ),
                                             ),
                                             Expanded(
                                               flex: 1,
                                               child: Container(
-                                                width: 25,
                                                 color: Colors.lightBlueAccent,
                                               ),
                                             ),
                                             Expanded(
                                               flex: 1,
                                               child: Container(
-                                                width: 25,
                                                 color: Colors.yellow,
                                               ),
                                             ),
