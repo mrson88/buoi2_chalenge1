@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.pink,
-        body: Center(
+        body: SafeArea(
           child: Stack(
             children: [
               Container(
